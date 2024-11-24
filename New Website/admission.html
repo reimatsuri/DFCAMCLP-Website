@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="admission.css">
+    <script src="script.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inknut+Antiqua:wght@400" />
+    
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header-container">
+            <div class="college-logo-container">
+                <img src="assets/logo.png" class="college-logo" alt="College Logo">
+                <p class="college-heading-style">Dr. Filemon C. Aguilar Memorial College of Las Piñas</p>
+            </div>
+
+            <div id="mySidenav" class="sidenav">
+                <button class="closebtn" onclick="closeNav()">&times;</button>
+                <a href="landingpage.html">Home</a>
+                <div class="dropdown-section">
+                    <button class="drop-btn" onclick="toggleDropdown('admissionDropdown')">
+                        Admission <i class="fa fa-chevron-down dropdown-icon"></i>
+                    </button>
+                    <div id="admissionDropdown" class="drop-container">
+                        <a href="admission.html">Admission</a>
+                        <a href="undergrad.html">Undergraduate Programs</a>
+                        <a href="enrollment.html">Enrollment</a>
+                    </div>
+                </div>
+                <div class="dropdown-section">
+                    <button class="drop-btn" onclick="toggleDropdown('studentsDropdown')">
+                        Students <i class="fa fa-chevron-down dropdown-icon"></i>
+                    </button>
+                    <div id="studentsDropdown" class="drop-container">
+                        <a href="org.html">Organizations</a>
+                    </div>
+                </div>
+                <div class="dropdown-section">
+                    <button class="drop-btn" onclick="toggleDropdown('aboutDropdown')">
+                        About <i class="fa fa-chevron-down dropdown-icon"></i>
+                    </button>
+                    <div id="aboutDropdown" class="drop-container">
+                        <a href="history.html">History</a>
+                        <a href="mvv.html">Mission, Vision, & Values</a>
+                        <a href="hymn.html">Hymns</a>
+                        <a href="executive.html">Executive Officers & Academic Managers</a>
+                    </div>
+                </div>
+                <a href="login.html">Login</a>
+            </div>
+            
+            <!-- Burger Menu -->
+            <button class="burger-menu" onclick="openNav()" aria-label="Toggle navigation">
+                ☰
+            </button>
+            
+            <nav class="navigation-links-container">
+                <a href="landingpage.html" class="navigation-link">Home</a>
+                <div class="navigation-link">
+                    Admission
+                    <div class="dropdown">
+                        <a href="admission.html">Admission</a>
+                        <a href="undergrad.html">Undergraduate Programs</a>
+                        <a href="enrollment.html">Enrollment</a>
+
+                    </div>
+                </div>
+                <div class="navigation-link">
+                    Students
+                    <div class="dropdown">
+                        <a href="org.html">Organizations</a>
+                    </div>
+                </div>
+                <div class="navigation-link">
+                    About
+                    <div class="dropdown">
+                        <a href="history.html">History</a>
+                        <a href="mvv.html">Mission, Vision, & Values</a>
+                        <a href="hymn.html">Hymns</a>
+                        <a href="executive.html">Executive Officers & Academic Managers</a>
+                    </div>
+                </div>
+                <a href="login.html" class="navigation-link">Login</a>
+            </nav>
+        </header>
+
+        <!-- Background overlay -->
+        <div class="background-overlay"></div>
+
+         <!-- Banner -->
+         <div class="banner-container">
+            <img src="assets/banners/admission-banner.png" alt="Banner Image" class="banner-image">
+        </div>
+
+         <!-- New Image above the left-side text -->
+          <div class="image-left-underbanner">
+            <img src="assets/admission/assetadmision.jpeg" alt="New Left Image">
+        </div>
+
+        <!-- Text above the left-side image-->
+        <div class="left-text">
+            <b>Your Path to Quality And Affordable Education.</b>
+        </div>
+
+        <div class="left-content-box">
+            <div class = "enroll-now-text"><p><b><br>ENROLL NOW AT DR. FILEMON C. AGUILAR MEMORIAL COLLEGE OF LAS PIÑAS</b></p>
+        </div>
+            <p><b>Dr. Filemon C. Aguilar Memorial College of Las Piñas</b>
+            is now applications for the upcoming academic year.
+            DFCAMCLP offers high-quality degree programs 
+            designed to equip students with the essential knowledge
+            and skills for today’s competitive world. With a 
+            dedicated faculty, modern facilities, and a strong
+            commitment to accessible education, we provide an
+            inclusive and supportive learning environment.</p>
+            </ul>
+        </div>
+    </section>
+
+        <section>
+
+        <div class="right-text">
+            <b>Why Choose Dr. Filemon C. Aguilar Memorial College of Las Pinas?</b>
+        </div>
+    
+        <div class="right-content-box">
+            <p><b> AFFORDABLE AND ACCESSIBLE EDUCATION:</b> Enjoy highquality
+                 programs without the financial burden.<br>
+                <b>STRONG ACADEMIC FOUNDATION:</b> Benefit from experienced
+                educators and a comprehensive curriculum.<br>
+                <b>STATE-OF-THE-ART FACILITIES:</b> Learn in a well-equipped
+                and conducive environment.<br>
+                <b>HOLISTIC STUDENT SUPPORT:</b> Access academic, career, and
+                personal guidance to ensure success.</p>
+            </ul>
+        </div>
+
+        <!-- Image below the search bar on the right -->
+        <div class="right-image">
+            <img src="assets/admission/image2.jpg" alt="Right-side Image">
+        </div>
+    </section>
+    </div>
+</body>
+</html>

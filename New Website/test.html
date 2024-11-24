@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inknut+Antiqua:wght@400" />
+    <link rel="stylesheet" href="org.css">
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js"></script>
+    <style>
+        /* Global styles for the container and layout */
+        .acontainer { 
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+
+        /* Styling for the left and right columns */
+        .left, .right {
+            padding: 10px;
+            box-sizing: border-box;
+        }
+
+        .left {
+            background-color: black;
+        }
+
+        .right {
+            background-color: black;
+        }
+
+        /* Media query for smaller screen sizes */
+        @media (max-width: 766px) {
+            .acontainer {
+                grid-template-columns: 1fr; /* Stack columns on small screens */
+            }
+        }
+    </style>
+</head>
+<body>
+    <div style="display: inline-block; width: 100%;">
+
+        <!-- Header -->
+        <div class="header-container">
+            <div class="college-logo-container" style="display: flex; align-items: center;">
+                <img src="assets/logo.png" class="college-logo" alt="College Logo" />
+                <p class="college-heading-style">Dr. Filemon C. Aguilar Memorial College of Las Pinas</p>
+            </div>
+            
+            <div id="mySidenav" class="sidenav">
+                <button class="closebtn" onclick="closeNav()">&times;</button>
+                <a href="landingpage.html">Home</a>
+                <div class="dropdown-section">
+                    <button class="drop-btn" onclick="toggleDropdown('admissionDropdown')">
+                        Admission <i class="fa fa-chevron-down dropdown-icon"></i>
+                    </button>
+                    <div id="admissionDropdown" class="drop-container">
+                        <a href="admission.html">Home</a>
+                        <a href="undergrad.html">Undergraduate Programs</a>
+                        <a href="enrollment.html">Enrollment</a>
+                        <a href="contact.html">Contact</a>
+                    </div>
+                </div>
+                <div class="dropdown-section">
+                    <button class="drop-btn" onclick="toggleDropdown('studentsDropdown')">
+                        Students <i class="fa fa-chevron-down dropdown-icon"></i>
+                    </button>
+                    <div id="studentsDropdown" class="drop-container">
+                        <a href="org.html">Organizations</a>
+                        <a href="osa.html">Office of Student Affairs</a>
+                    </div>
+                </div>
+                <div class="dropdown-section">
+                    <button class="drop-btn" onclick="toggleDropdown('aboutDropdown')">
+                        About <i class="fa fa-chevron-down dropdown-icon"></i>
+                    </button>
+                    <div id="aboutDropdown" class="drop-container">
+                        <a href="history.html">History</a>
+                        <a href="mvv.html">Mission, Vision, & Values</a>
+                        <a href="hymn.html">Hymns</a>
+                        <a href="executive.html">Executive Officers & Academic Managers</a>
+                    </div>
+                </div>
+                <a href="login.html">Login</a>
+            </div>
+            
+            <!-- Burger Menu -->
+            <button class="burger-menu" onclick="openNav()" aria-label="Toggle navigation">
+                ☰
+            </button>
+
+            <div class="navigation-links-container">
+                <a href="landingpage.html" class="navigation-link">Home</a>
+                <div class="navigation-link">
+                    Admission
+                    <div class="dropdown">
+                        <a href="admission.html">Home</a>
+                        <a href="undergrad.html">Undergraduate Programs</a>
+                        <a href="enrollment.html">Enrollment</a>
+                        <a href="contact.html">Contact</a>
+                    </div>
+                </div>
+                <div class="navigation-link">
+                    Students
+                    <div class="dropdown">
+                        <a href="org.html">Organizations</a>
+                        <a href="osa.html">Office of Student Affairs</a>
+                    </div>
+                </div>
+                <div class="navigation-link">
+                    About
+                    <div class="dropdown">
+                        <a href="history.html">History</a>
+                        <a href="mvv.html">Mission, Vision, & Values</a>
+                        <a href="hymn.html">Hymns</a>
+                        <a href="executive.html">Executive Officers & Academic Managers</a>
+                    </div>
+                </div>
+                <a href="login.html" class="navigation-link">Login</a>
+            </div>
+        </div>
+
+        <!-- Main Banner Section -->
+        <div class="organizations-banner-container">
+            <img src="assets/banners/organizations-banner.png" alt="Organizations Banner" class="organizations-banner-image">
+            <div class="background-overlay"></div>   
+        </div>
+
+        <!-- Main Content Section -->
+        <div class="acontainer">
+
+            <!-- Left Column: Organizations -->
+            <div class="left">
+                <!-- Organization 1 -->
+                <div class="organization">
+                    <div class="logo">
+                        <img src="assets/images/JPIA.PNG" alt="JPIA Logo">
+                    </div>
+                    <div class="details">
+                        <h2>JUNIOR PHILIPPINE INSTITUTE OF ACCOUNTANTS (JPIA)</h2>
+                        <p>Junior Philippine Institute of Accountants is a non-profit, non-stock organization, a member of the National Federation of Junior Philippine Institute of Accountants - NCR Council, an affiliate of National Federation of Junior Philippine Institute of Accountants and duly recognized by the Philippine Institute of Certified Public Accountants (PICPA).</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Column: College News and Events -->
+            <div class="right">
+                <h2>College News and Events</h2>
+                <!-- Search Bar -->
+                <div class="search-bar">
+                    <input type="text" id="searchInput" placeholder="Search events..." onkeyup="filterNews()">
+                </div>
+
+                <!-- News Events List -->
+                <ul class="news-events" id="newsList">
+                    <li>
+                        <img src="assets/images/1.jpg" alt="Gender and Development Seminar">
+                        <h3>Gender and Development Seminar</h3>
+                        <p>October 19, 2024</p>
+                    </li>
+                </ul>
+            </div>
+        </div> <!-- END main container -->
+
+    </div>
+</body>
+</html>
