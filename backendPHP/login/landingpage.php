@@ -48,7 +48,7 @@ include("connect.php");
                     <div id="admissionDropdown" class="drop-container">
                         <a href="admission.html">Admission</a>
                         <a href="undergrad.html">Undergraduate Programs</a>
-                        <a href="enrollment.html">Enrollment</a>
+                        <a href="enrollment.php">Enrollment</a>
                     </div>
                 </div>
                 <div class="dropdown-section">
@@ -85,7 +85,7 @@ include("connect.php");
                     <div class="dropdown">
                         <a href="admission.html">Admission</a>
                         <a href="undergrad.html">Undergraduate Programs</a>
-                        <a href="enrollment.html">Enrollment</a>
+                        <a href="enrollment.php">Enrollment</a>
                     </div>
                 </div>
                 <div class="navigation-link">
