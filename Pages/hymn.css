@@ -1,0 +1,100 @@
+.acontainer { 
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+/* Styling for the left and right columns */
+.left, .right {
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.left {
+    background-color: black;
+}
+
+.right {
+    background-color: black;
+}
+
+/* Media query for smaller screen sizes */
+@media (max-width: 766px) {
+    .acontainer {
+        grid-template-columns: 1fr; /* Stack columns on small screens */
+    }
+}
+
+/* Left column styling */
+.left-column {
+    width: 85%; /* Takes up 60% of the available space */
+    background-color: #f4f4f4;
+    padding: 20px;
+    margin-left: 50px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    overflow-y: auto; /* Allows scrolling if content exceeds height */
+}
+
+.left-column h3,
+.left-column h4 {
+    color: #355b22;
+}
+
+.left-column p {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #333;
+}
+
+.hymn-section h3 {
+    color: #103775;
+    }
+.hymn-section p {
+    color: #333;
+}
+
+.hymn-section h4 {
+    color: #355b22;
+    }
+
+/* Right column styling */
+.hymn-right-column {
+    margin-left: 50px;
+    width: 10%; /* Takes up 35% of the available space */
+    display: block;
+    flex-direction: column;
+}
+
+.hymn-right-column h3 {
+    display: flex;
+    color: #ffffff;
+    }
+.videos {
+    padding: 10px;
+    border-radius: 0px;
+    margin-bottom: 5%;
+    background-size: cover;
+}
+
+@media (max-width: 768px) {
+
+    .hymn-right-column {
+        width: 100%;
+    }
+
+    .videos {
+        margin-bottom: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .header-container {
+        padding: 10px;
+    }
+
+    .college-heading-style {
+        font-size: 14px;
+    }
+}
