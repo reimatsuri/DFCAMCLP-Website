@@ -18,18 +18,6 @@ include("connect.php");
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400&display=swap">
 </head>
 <body>
-    <p>
-    Hello <?php
-    if(isset($_SESSION['email'])){
-        $email=$_SESSION['email'];
-        $query=mysqli_query($conn, "SELECT users.* FROM 'users' WHERE users.email='$email'");
-        while($row=mysqli_fetch_array($query)){
-            echo $row['fullname'];
-        }
-    }
-    ?>
-    :)
-    </p>
     <div class="container">
         <!-- Header -->
         <header class="header-container">

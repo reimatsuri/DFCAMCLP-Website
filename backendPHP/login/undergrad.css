@@ -28,46 +28,13 @@
 
 /* Left column styling */
 .left-column {
-    width: 84%; /* Takes up 60% of the available space */
-    background-color: white;
-    color: #ffffff;
+    width: 85%; /* Takes up 60% of the available space */
+    background-color: #f4f4f4;
     padding: 20px;
     margin-left: 50px;
     margin-bottom: 25px;
     border-radius: 8px;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-}
-
-.right-column {
-    width: 80%;
-    margin-left: 20px;
-    padding: 0%;
-}
-
-.image-styles {
-    width: 90%; /* Takes up 60% of the available space */
-    background-color: transparent;
-    margin-left: 50px;
-    margin-bottom: 25px;
-    border-radius: 8px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-}
-
-.image-styles-2 {
-    width: 80%; /* Takes up 60% of the available space */
-    background-color: transparent;
-    margin-left: 50px;
-    margin-bottom: 25px;
-    border-radius: 8px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-}
-
-.left-column-text {
-    font-size: 24px;
-    width: 85%; /* Takes up 60% of the available space */
-    color: #333;
-    margin-left: 50px;
-    margin-bottom: 25px;
     overflow-y: auto; /* Allows scrolling if content exceeds height */
 }
 
@@ -80,22 +47,14 @@
     font-size: 16px;
     line-height: 1.6;
     color: #333;
+    text-align: justify;
 }
-
-.left-column-text h3 {
-    color: #103775;
-    }
-
-.left-column-text p {
-    color: #333;
-    }
 
 .undergrad-section h3 {
     color: #103775;
     }
 .undergrad-section p {
     color: #333;
-    font-size: 20px;
 }
 
 .undergrad-section h4 {
@@ -104,18 +63,18 @@
 
 /* Right column styling */
 .undergrad-right-column {
-    font-size: 16px;
     margin-left: 50px;
-    padding-right: 78px;
-    padding-bottom: 45px;
+    margin-bottom: 25px;
     width: 70%;
-    height: 250px;
-    max-height: 250px;
+    height: 320px;
+    max-height: 320px;
+    padding: 20px;
     display: block;
     flex-direction: column;
     border-radius: 8px;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
     background-color: #f4f4f4;
+    overflow-y: auto;
 }
 
 .undergrad-right-column h3 {
@@ -127,6 +86,10 @@
 
     .undergrad-right-column {
         width: 100%;
+    }
+
+    .videos {
+        margin-bottom: 10px;
     }
 }
 

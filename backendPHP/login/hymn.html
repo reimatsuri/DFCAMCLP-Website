@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="hymn.css">
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inknut+Antiqua:wght@400" />
+    
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header-container">
+            <div class="college-logo-container">
+                <img src="assets/logo.png" class="college-logo" alt="College Logo">
+                <p class="college-heading-style">Dr. Filemon C. Aguilar Memorial College of Las Piñas</p>
+            </div>
+            
+            <div id="mySidenav" class="sidenav">
+                <button class="closebtn" onclick="closeNav()">&times;</button>
+                <a href="landingpage.php">Home</a>
+                <div class="dropdown-section">
+                    <button class="drop-btn" onclick="toggleDropdown('admissionDropdown')">
+                        Admission <i class="fa fa-chevron-down dropdown-icon"></i>
+                    </button>
+                    <div id="admissionDropdown" class="drop-container">
+                        <a href="admission.html">Home</a>
+                        <a href="undergrad.html">Undergraduate Programs</a>
+                        <a href="enrollment.php">Enrollment</a>
+                    </div>
+                </div>
+                <div class="dropdown-section">
+                    <button class="drop-btn" onclick="toggleDropdown('studentsDropdown')">
+                        Students <i class="fa fa-chevron-down dropdown-icon"></i>
+                    </button>
+                    <div id="studentsDropdown" class="drop-container">
+                        <a href="org.html">Organizations</a>
+                    </div>
+                </div>
+                <div class="dropdown-section">
+                    <button class="drop-btn" onclick="toggleDropdown('aboutDropdown')">
+                        About <i class="fa fa-chevron-down dropdown-icon"></i>
+                    </button>
+                    <div id="aboutDropdown" class="drop-container">
+                        <a href="history.html">History</a>
+                        <a href="mvv.html">Mission, Vision, & Values</a>
+                        <a href="hymn.html">Hymns</a>
+                        <a href="executive.html">Executive Officers & Academic Managers</a>
+                    </div>
+                </div>
+                <a href="logout.php">Logout</a>
+            </div>
+            
+            <!-- Burger Menu -->
+            <button class="burger-menu" onclick="openNav()" aria-label="Toggle navigation">
+                ☰
+            </button>
+
+        <nav class="navigation-links-container">
+            <a href="landingpage.php" class="navigation-link">Home</a>
+            <div class="navigation-link">
+                Admission
+                <div class="dropdown">
+                    <a href="admission.html">Admission</a>
+                    <a href="undergrad.html">Undergraduate Programs</a>
+                    <a href="enrollment.php">Enrollment</a>
+                </div>
+            </div>
+            <div class="navigation-link">
+                Students
+                <div class="dropdown">
+                    <a href="org.html">Organizations</a>
+                </div>
+            </div>
+            <div class="navigation-link">
+                About
+                <div class="dropdown">
+                    <a href="history.html">History</a>
+                    <a href="mvv.html">Mission, Vision, & Values</a>
+                    <a href="hymn.html">Hymns</a>
+                    <a href="executive.html">Executive Officers & Academic Managers</a>
+                </div>
+            </div>
+            <a href="logout.php" class="navigation-link">Logout</a>
+        </nav>
+    </header>
+
+    <section class="banner-container">
+        <img src="assets/banners/hymn-banner.png" alt="Banner Image" class="banner-image">
+    </section>
+
+        <!-- Below Main Banner Section -->
+    <!-- Main Content -->
+    <div class="acontainer">
+        <div class="hymn-section">
+            <div class="left-column">
+                <h3>DR. FILEMON C. AGUILAR MEMORIAL COLLEGE OF LAS PIÑAS - HYMN</h3>
+
+                <h4>Verse I</h4>
+
+                <p>From the City of Love and Progress <br>
+                    Stood a college of Open Hands <br>
+                    Giving us Hope and Dignity <br>
+                    For us to serve our Motherland <br>
+                </p>
+
+                <h4>Verse II</h4>
+
+                <p>From thy portals, <br>
+                    We gain our Strength <br>
+                    In thy hallways is our knowledge <br>
+                    Your beauty as inspiration <br>
+                    And your caring, for our courage <br>
+                </p>
+
+                <h4>Chorus</h4>
+
+                <p>Oh, DFCAM College <br>
+                    Oh, our Alma Mater <br>
+                    With your guide thy tears <br>
+                    We will never suffer <br>
+                    Oh, DFCAM College <br>
+                    Oh, our Alma Mater <br>
+                    Our Pathway to success <br>
+                    Together we will conque <br>
+                </p>
+
+                <h4>Verse III</h4>
+
+                <p>Nothing but tears of happiness <br>
+                    As we march on to victory <br>
+                    Will my heart feel <br>
+                    Will my soul love <br>
+                    With the colors of our Memory <br>    
+                </p>
+
+                <h4>Chorus</h4>
+
+                <p>Oh, DFCAM College <br>
+                    Oh, our Alma Mater <br>
+                    With your guide thy tears <br>
+                    We will never suffer <br>
+                    Oh, DFCAM College <br>
+                    Oh, our Alma Mater <br>
+                    Our Pathway to success <br>
+                    Together we will conque <br>
+                </p>
+            </div>
+        </div>
+    
+    
+    <!-- Right Column: Search Bar and News Events -->
+     
+            <div class="hymn-right-column">
+                <!-- Videos -->
+                <div class="videos">
+                    <h3>DFCAMCLP HYMN</h3>
+                    <video width= "500" height= "300" controls src="videos/DFCAMCLP-HYMN.mp4"> </video>
+                    
+                    <h3>LAS PIÑAS HYMN</h3>
+                    <video width= "500" height= "300" controls src="videos/LPC-HYMN.mp4"> </video>
+                </div>
+            </div>
+        </div>
+        <!-- Background overlay -->
+        <div class="background-overlay"></div>
+    </div>
+</body>
+</html>

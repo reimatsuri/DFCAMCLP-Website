@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="undergrad.css">
+    <script src="script.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inknut+Antiqua:wght@400" />
+    
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header-container">
+            <div class="college-logo-container">
+                <img src="assets/logo.png" class="college-logo" alt="College Logo">
+                <p class="college-heading-style">Dr. Filemon C. Aguilar Memorial College of Las Piñas</p>
+            </div>
+
+            <div id="mySidenav" class="sidenav">
+                <button class="closebtn" onclick="closeNav()">&times;</button>
+                <a href="landingpage.php">Home</a>
+                <div class="dropdown-section">
+                    <button class="drop-btn" onclick="toggleDropdown('admissionDropdown')">
+                        Admission <i class="fa fa-chevron-down dropdown-icon"></i>
+                    </button>
+                    <div id="admissionDropdown" class="drop-container">
+                        <a href="admission.html">Admission</a>
+                        <a href="undergrad.html">Undergraduate Programs</a>
+                        <a href="enrollment.php">Enrollment</a>
+                    </div>
+                </div>
+                <div class="dropdown-section">
+                    <button class="drop-btn" onclick="toggleDropdown('studentsDropdown')">
+                        Students <i class="fa fa-chevron-down dropdown-icon"></i>
+                    </button>
+                    <div id="studentsDropdown" class="drop-container">
+                        <a href="org.html">Organizations</a>
+                    </div>
+                </div>
+                <div class="dropdown-section">
+                    <button class="drop-btn" onclick="toggleDropdown('aboutDropdown')">
+                        About <i class="fa fa-chevron-down dropdown-icon"></i>
+                    </button>
+                    <div id="aboutDropdown" class="drop-container">
+                        <a href="history.html">History</a>
+                        <a href="mvv.html">Mission, Vision, & Values</a>
+                        <a href="hymn.html">Hymns</a>
+                        <a href="executive.html">Executive Officers & Academic Managers</a>
+                    </div>
+                </div>
+                <a href="logout.php">Logout</a>
+            </div>
+            
+            <!-- Burger Menu -->
+            <button class="burger-menu" onclick="openNav()" aria-label="Toggle navigation">
+                ☰
+            </button>
+            
+            <nav class="navigation-links-container">
+                <a href="landingpage.php" class="navigation-link">Home</a>
+                <div class="navigation-link">
+                    Admission
+                    <div class="dropdown">
+                        <a href="admission.html">Admission</a>
+                        <a href="undergrad.html">Undergraduate Programs</a>
+                        <a href="enrollment.php">Enrollment</a>
+                    </div>
+                </div>
+                <div class="navigation-link">
+                    Students
+                    <div class="dropdown">
+                        <a href="org.html">Organizations</a>
+                    </div>
+                </div>
+                <div class="navigation-link">
+                    About
+                    <div class="dropdown">
+                        <a href="history.html">History</a>
+                        <a href="mvv.html">Mission, Vision, & Values</a>
+                        <a href="hymn.html">Hymns</a>
+                        <a href="executive.html">Executive Officers & Academic Managers</a>
+                    </div>
+                </div>
+                <a href="logout.php" class="navigation-link">Logout</a>
+            </nav>
+        </header>
+
+        <!-- Background overlay -->
+        <div class="background-overlay"></div>
+
+         <!-- Banner -->
+         <div class="banner-container">
+            <img src="assets/undergrad/undergrad.png" alt="Banner Image" class="banner-image">
+        </div>
+
+        
+    <!-- Below Main Banner Section -->
+    <!-- Main Content -->
+    <div class="acontainer">
+        <div class="undergrad-section">
+            <div class="left-column">
+                <img src="assets/undergrad/BSA.jpg">
+                <h3>BACHELOR OF SCIENCE IN ACCOUNTANCY</h3>
+                <p>The <b>Bachelor of Science in Accountancy (BSA)</b>
+                    is a four-year program which provides general accounting education to learners who wish to pursue a professional career as accountants, particularly as public accountants for the civil service.</p>
+            </div>
+
+            <div class="left-column">
+                <img src="assets/undergrad/BSBA.jpg">
+                <h3>BACHELOR OF SCIENCE IN BUSINESS ADMINISTRATION</h3>
+                <p>The<b> Bachelor of Science in Business Administration (BSBA)</b>
+                    is a four-year program which provides professional business and management education for those who would like to become entrepreneurs or pursue a career in any field of business such as economics, finance, human capital management, and marketing.</p>
+            </div>
+
+            <div class="left-column">
+                <img src="assets/undergrad/BSBA FINANCE.jpg">
+                <h3>BACHELOR OF SCIENCE IN BUSINESS ADMINISTRATION MAJOR IN FINANCIAL MANAGEMENT</h3>
+                <p><b>Bachelor of Science in Business Administration, Major in Financial Management</b>
+                    is a four-year degree program that provides students with a strong foundation on theories, principles, and concepts that equip them with relevant technical and analytical skills necessary in financial decision-making, cognizant of a dynamic domestic and global business environments, and mindful of their role in nation-building.</p>
+            </div>
+
+            <div class="left-column">
+                <img src="assets/undergrad/BSBA HRM.jpg">
+                <h3>BACHELOR OF SCIENCE IN BUSINESS ADMINISTRATION MAJOR IN HUMAN RESOURCE DEVELOPMENT MANAGEMENT</h3>
+                <p><b>tHE Bachelor of Science in Business Administration, Major in Human Resource Management</b>
+                    is a four-year program that prepares its students to have the necessary skills and competencies that will allow them thrive in any industry and manage an organization’s human capital.</p>
+            </div>
+
+            <div class="left-column">
+                <img src="assets/undergrad/BSBA MARKETING.jpg">
+                <h3>BACHELOR OF SCIENCE IN BUSINESS ADMINISTRATION MAJOR IN MARKETING MANAGEMENT</h3>
+                <p>The<b> Bachelor of Science in Business Administration, Major in Marketing Management</b>
+                    program produces well-rounded, globally competitive graduates equipped with the knowledge to cover specific areas in marketing, such as marketing research, distribution management, product management, brand management, personal selling, pricing management, and Internet management in order to meet the needs of the changing environment in the business world.</p>
+            </div>
+
+            <div class="left-column">
+                <img src="assets/undergrad/BSIS.jpg">
+                <h3>BACHELOR OF SCIENCE IN INFORMATION SYSTEMS</h3>
+                <p>The<b> Bachelor of Science in Information Systems (BSIS)</b>
+                    is a four-year degree program that deals with the design and implementation of solutions that integrate information technology with business processes. The program teaches students about hardware and software applications and how they can use them to collect, filter, process, create and distribute data.</p>
+            </div>
+
+            <div class="left-column">
+                <img src="assets/undergrad/BSCPE.jpg">
+                <h3>BACHELOR OF SCIENCE IN COMPUTER ENGINEERING</h3>
+                <p>The<b> Bachelor of Science in Computer Engineering (BSCpE)</b>
+                    is a four-year program that is a combination of electrical engineering and computer science. The curriculum provides students with a foundation in basic science, mathematics, software, and engineering. It covers topics on how to design a microprocessor and develop embedded systems that are used in desktops or handheld devices.</p>
+            </div>
+        </div>
+    
+    <!-- Right Column: Admission and Contact -->
+     
+        <div class="undergrad-right-column">
+            <!-- Contact Section -->
+            <div class="right-column">
+                <h3>ADMISSION AND CONTACTS</h3>
+            <p> <b> DR. FILEMON C. AGUILAR MEMORIAL COLLEGE OF LAS PINAS - MAIN CAMPUS.</b><br>
+                Topland Ave, Golden Gate Subd., Talon Tres, Las Piñas City<br>
+                (02)8403 1985<br>
+                ocr.main@dfcamclp.edu.ph<br>
+                <b>DR. FILEMON C. AGUILAR MEMORIAL COLLEGE OF LAS PINAS - SATELLITE CAMPUS.</b><br>
+                Dandelion St., Doña Manuela Subd.,Pamplona Tres, Las Piñas City<br>
+                (02)831-3681 or 511-8402<br>
+                dfcaitti.registrar@yahoo.com.ph<br>
+            </p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

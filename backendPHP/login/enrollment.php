@@ -133,9 +133,9 @@
 
         <div class="admission-form-container">
             <h3>Admission Registration</h3>
-            <form id="admissionForm">
+            <form action="enroll.php" method="POST" id="admissionForm">
                 <label for="name">Name:</label>
-                <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+                <input type="text" id="name" name="fullname" placeholder="Enter your full name" required>
         
                 <label for="email">Email Address:</label>
                 <input type="email" id="email" name="email" placeholder="Enter your email" required>
@@ -144,9 +144,9 @@
                 <input type="tel" id="contact" name="contact" placeholder="Enter your contact number" required>
         
                 <label for="course">Undergraduate Course:</label>
-                <input type="text" id="course" name="course" placeholder="Enter your desired course" required>
+                <input type="text" id="course" name="course" placeholder="Enter your desired course (BSBA,BSA,BSIS,BSCPE)" required>
         
-                <button type="submit">Submit</button>
+                <button type="submit" name="enroll">Submit</button>
             </form>
         </div>
         
