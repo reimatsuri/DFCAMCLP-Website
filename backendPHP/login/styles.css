@@ -1,0 +1,622 @@
+/* Global Styles */
+body {
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+}
+
+/* Header Styles */
+.container {
+    display: inline-block;
+    width: 100%;
+}
+
+.header-container {
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 40px;
+    background: #103775;
+    min-width: 100%;
+    flex-wrap: wrap;
+}
+
+.college-logo {
+    width: auto;
+    height: auto;
+    max-width: 80px;
+}
+.college-logo-container {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+.college-heading-style {
+    font: 400 16px "Inknut Antiqua", serif;
+    color: white;
+    margin-left: 10px;
+    max-width: 200px;
+    white-space: nowrap;
+    overflow: visible;
+    text-overflow: clip;
+    text-align: left;
+}
+@media (max-width: 768px) {
+    .header-container {
+        flex-direction: row; /* Stack items vertically */
+        align-items: center;
+        justify-content: flex-start;
+    }
+
+    .navigation-links-container {
+        flex-direction: column; /* Stack navigation links */
+        gap: 10px; /* Reduce spacing */
+    }
+
+    .college-logo-container {
+        justify-content: flex-start; /* Align logo and text to the left */
+        padding-left: 10px; /* Add left padding for spacing */
+    }
+    
+    .college-heading-style {
+        text-align: left;
+        font-size: 14px; /* Smaller text size */
+    }
+    .college-logo {
+        width: 60px; /* Scale down logo size */
+        height: auto; /* Maintain aspect ratio */
+    }
+}
+.navigation-links-container {
+    display: flex;
+    gap: 40px;
+}
+.burger-menu {
+    display: none;
+    font-size: 24px;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    outline: none;
+    z-index: 10;
+}
+@media (max-width: 1280px) {
+    .navigation-links-container {
+        display: none;
+        flex-direction: column;
+        background-color: #103775;
+        position: absolute;
+        top: 70px;
+        right: 20px;
+        padding: 10px;
+        border-radius: 5px;
+        z-index: 1000;
+        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+    }
+
+    .burger-menu {
+        display: block;
+        margin-left: 250px;
+    }
+
+    .navigation-links-container.active {
+        display: flex;
+    }
+}
+.navigation-link {
+    font: 400 18px "Inter", sans-serif;
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+position: relative;
+    transition: background-color 0.3s, color 0.3s;
+}
+.navigation-link:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+    color: #000;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+
+/* Dropdown Menu with Animation */
+.dropdown {
+display: none; 
+opacity: 0;
+position: absolute;
+top: 35px; 
+   left: 0;
+ background-color: white;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  overflow: hidden;
+  z-index: 1;
+ transform: translateY(-10px);
+ transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.navigation-link:hover .dropdown {
+display: block;
+opacity: 1;
+transform: translateY(0);
+}
+
+.dropdown a {
+color: #333;
+padding: 12px 20px;
+text-decoration: none;
+display: flex;
+align-items: center;
+font-size: 16px;
+position: relative;
+font-weight: normal; 
+transition: background-color 0.3s, color 0.3s, font-weight 0.3s;
+}
+.dropdown a:hover {
+background-color: #f1f1f1;
+color: #103775;
+font-weight: bold;
+}
+
+
+/* Darker Left Line Highlight on Hover */
+.dropdown a:hover::before {
+content: '';
+position: absolute;
+left: 0;
+top: 0;
+height: 100%;
+width: 4px;
+   background-color: #082145;
+   transition: width 0.3s;
+}
+
+
+/* Dropdown Animation */
+.navigation-link:hover .dropdown {
+opacity: 1;
+transform: translateY(0);
+}
+
+/* Side Navigation*/
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    left: 0;
+    background-color: #103775;
+    overflow-x: hidden;
+    transition: 0.5s; /* Smooth opening/closing */
+    padding-top: 60px; /* Space for the close button */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.sidenav a,
+.sidenav button {
+    padding: 8px 16px;
+    text-decoration: none;
+    font-size: 18px;
+    color: #fff;
+    display: block;
+    transition: color 0.3s, background 0.3s;
+    border: none;
+    background: none;
+    text-align: left;
+    width: 100%;
+    cursor: pointer;
+}
+
+.sidenav a:hover,
+.sidenav button:hover {
+    color: #103775;
+    background: #f1f1f1; /* Highlight color */
+}
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 5px;
+    font-size: 36px;
+    color: #fff;
+    cursor: pointer;
+    background: none;
+    border: none;
+}
+
+/* Dropdown Styles */
+.drop-container {
+    display: none;
+    background-color: #255f9d; /* Slightly lighter shade */
+    padding-left: 16px;
+    margin-left: 8px;
+    border-left: 3px solid #82b1ff; /* Accent line */
+}
+
+.drop-container a {
+    color: #fff;
+    font-size: 16px;
+    padding: 8px 0;
+}
+
+.drop-container a:hover {
+    color: #103775;
+    background: #e3f2fd;
+}
+
+/* Close Button Hover Effect */
+.closebtn:hover {
+    color: #f44336;
+}
+
+/* Add Burger Menu (Optional) */
+.burger-menu {
+    font-size: 24px;
+    cursor: pointer;
+    background: none;
+    border: none;
+    color: #fff;
+    padding: 10px;
+    transition: transform 0.3s ease;
+}
+
+.burger-menu:hover {
+    transform: scale(1.2);
+}
+
+/* Background Overlay */
+.background-overlay {
+position: fixed;
+top: 0;
+left: 0;
+width: 100%;
+height: 100vh;
+background: url("assets/background-image.png") center/cover no-repeat, rgba(0, 0, 0, 0.8);
+background-blend-mode: overlay;
+z-index: -1;
+}
+
+/* Banner Styles */
+.banner-container {
+width: 100%;
+height: auto; 
+display: flex;
+align-items: center;
+justify-content: center;
+overflow: hidden;
+position: relative;
+}
+.banner-image {
+width: 100%;
+max-width: 100%;
+height: 100%;
+object-fit: cover;
+object-position: center center;
+}
+@media (max-width: 768px) {
+    .banner-container {
+        height: 150px;
+    }
+
+    .banner-image {
+        object-fit: cover;
+        height: 100%; /* Ensure the image adjusts properly */
+    }
+}
+
+@media (max-width: 480px) {
+    .banner-container {
+        height: 100px;
+    }
+
+    .banner-image {
+        object-fit: cover; /* Ensure the image still covers the area */
+        height: 100%; /* Maintain the image's aspect ratio */
+    }
+}
+
+/* Landing Page Section */
+
+/* Title and Description Section */
+.content-section {
+    display: flex;
+    flex-wrap: wrap; /* Allow items to stack on smaller screens */
+    padding: 20px;
+    gap: 20px; /* Add spacing between items */
+    justify-content: center;
+    align-items: center;
+}
+
+.left-image {
+    width: 100%; /* Allow the image to scale */
+    max-width: 500px; /* Prevent it from becoming too large */
+    height: auto;
+    margin-right: 20px;
+    padding: px;
+}
+
+.content {
+    max-width: 600px; /* Restrict the width of the text */
+    text-align: justify;
+    padding: 10px;
+}
+
+.content-title {
+    font-family: 'Obra Letra', sans-serif;
+    font-size: 24px; /* Default size */
+    color: white;
+    text-align: center; /* Center title on small screens */
+    margin-bottom: 10px;
+}
+
+.content-description {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 16px;
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    color: #333;
+    line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+    .content-section {
+        flex-direction: column; /* Stack the image and text */
+        align-items: center; /* Center-align items */
+        padding: 10px; /* Reduce padding */
+    }
+
+    .left-image {
+        max-width: 90%; /* Reduce image size */
+        padding: 10px;
+        margin-right: 0; /* Remove right margin */
+    }
+
+    .content-title {
+        font-size: 20px; /* Reduce font size */
+        text-align: center; /* Center-align the title */
+    }
+
+    .content-description {
+        font-size: 14px; /* Smaller font size for the description */
+        padding: 15px; /* Reduce padding */
+    }
+}
+@media (max-width: 480px) {
+    .content-section {
+        padding: 5px; /* Further reduce padding for very small screens */
+    }
+
+    .left-image {
+        max-width: 100%; /* Image will take up full width on very small screens */
+        margin-right: 0; /* Remove margin for full width */
+    }
+
+    .content-title {
+        font-size: 18px; /* Even smaller font size */
+    }
+
+    .content-description {
+        font-size: 12px; /* Reduce description font size */
+    }
+}
+
+.new-banner-text {
+    width: 100%;
+    padding: 20px 80px;
+    padding-left: 120px; /* Adjust as needed */
+    color: white;
+    font-family: 'Inter', sans-serif;
+    font-size: 24px;
+    font-weight: bold;
+    text-align: justify;
+    background-color: transparent;
+    bottom: 20px;
+}
+
+/* Tablet View: Center the Text */
+@media (max-width: 768px) {
+    .new-banner-text {
+        text-align: center; /* Center text */
+        padding-left: 50px; /* Adjust padding for smaller screens */
+        padding-right: 20px; /* Adjust padding for smaller screens */
+    }
+}
+
+/* Mobile View: Center Text and Further Reduce Size */
+@media (max-width: 480px) {
+    .new-banner-text {
+        text-align: center; /* Center text */
+        font-size: 20px; /* Adjust font size for small screens */
+        padding-left: 10px; /* Adjust padding for small screens */
+        padding-right: 10px; /* Adjust padding for small screens */
+    }
+}
+
+.new-banner-image-container {
+    width: 100%;
+    height: auto; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    position: relative;
+    }
+    .new-banner-image {
+    width: 100%;
+    max-width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center center;
+    }
+    @media (max-width: 768px) {
+        .new-banner-image-container {
+            height: 150px;
+        }
+    
+        .new-banner-image {
+            object-fit: cover;
+            height: 100%; /* Ensure the image adjusts properly */
+        }
+    }
+    
+    @media (max-width: 480px) {
+        .new-banner-image-container {
+            height: 100px;
+        }
+    
+        .new-banner-image {
+            object-fit: cover; /* Ensure the image still covers the area */
+            height: 100%; /* Maintain the image's aspect ratio */
+        }
+    }
+
+/* Event Images Container */
+.events-images-container {
+    display: flex;
+    justify-content: center; /* Center images on larger screens */
+    gap: 20px; /* Space between images */
+    flex-wrap: wrap; /* Allow images to wrap onto the next row */
+    margin-top: 20px;
+}
+
+.events-image {
+    width: calc(33% - 20px); /* Default to 3 images per row on larger screens */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+@media (max-width: 768px) {
+    .events-image {
+        width: 80%; /* One image per row for mobile */
+        margin-left: 50px;
+        margin-bottom: 20px; /* Space between rows */
+    }
+
+    .events-images-container {
+        justify-content: flex-start; /* Align images to the left */
+    }
+}
+
+
+/* Events Section */
+.events-container {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px 80px;
+    background-color: transparent;
+    margin-bottom: -10px;
+    flex-wrap: wrap; /* Allows items to wrap onto the next line if needed */
+}
+
+/* Event Boxes */
+.event-box {
+    flex: 1;
+    margin: 0 10px;
+    padding: 15px;
+    color: white;
+    text-align: center;
+    font-family: 'Inter', sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 5px;
+    background-color: transparent;
+    min-width: 200px; /* Ensures a minimum width */
+}
+
+/* Description Containers */
+.description-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 0px 80px;
+    flex-wrap: wrap; /* Allow items to stack vertically on smaller screens */
+}
+
+/* Description Boxes */
+.description-box {
+    background-color: white;
+    color: #333; 
+    padding: 15px; 
+    margin: 0 10px; 
+    border-radius: 5px; 
+    font-family: 'DM Sans', sans-serif; 
+    font-size: 16px; 
+    line-height: 1.5; 
+    flex: 1;
+    min-width: 200px; /* Ensures a minimum width for the description boxes */
+}
+
+/* Responsive Adjustments for Tablets */
+@media (max-width: 768px) {
+    /* Adjust Events Section Layout */
+    .new-banner-text {
+        text-align: left; /* Center the title */
+        margin-bottom: 20px; /* Add space below the title */
+    }
+    
+    .description-box {
+        width: 100%; /* One description box per row on mobile */
+        margin-bottom: 20px; /* Space between description boxes */
+    }
+
+    .events-container {
+        display: none;
+        flex-direction: column; /* Stack event boxes vertically */
+        padding: 10px 20px; /* Adjust padding for smaller screens */
+    }
+
+    /* Event Box Layout */
+    @media (max-width: 768px) {
+        .event-box,
+        .description-box {
+            width: 100%; /* One description box per row on mobile */
+            margin-bottom: 20px; /* Space between description boxes */
+        }
+    }    
+}
+
+/* Responsive Adjustments for Mobile */
+@media (max-width: 480px) {
+    .new-banner-text {
+        text-align: center; /* Center the title */
+        margin-left: 50px;
+        margin-bottom: 20px; /* Add space below the title */
+    }
+    
+    .new-banner-container {
+        text-align: center; /* Center text content */
+    }
+    .event-box {
+        margin: 10px 0; /* Adjust margin for mobile */
+        min-width: 100%; /* Event boxes take full width on small screens */
+        font-size: 14px; /* Further reduce font size */
+    }
+    
+    /* Description Container Layout */
+    .description-container {
+        padding: 5px 10px; /* Further reduce padding for mobile */
+        flex-direction: column; /* Stack description boxes vertically */
+    }
+
+    /* Description Box Layout */
+    .description-box {
+        margin: 10px 0; /* Adjust margin for stacked items */
+        font-size: 12px; /* Smaller font size for mobile */
+    
+        .event-box:nth-child(odd),
+    .description-box:nth-child(even) {
+        order: 1; /* Event-box will appear first */
+    }
+
+    .event-box:nth-child(even),
+    .description-box:nth-child(odd) {
+        order: 2; /* Description-box will appear second */
+        }
+    }
+    /* End of Landing Page Section */
+}
